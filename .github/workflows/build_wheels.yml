@@ -37,5 +37,5 @@ jobs:
         with:
           name: wheel-${{ matrix.os }}-${{ github.run_id }}-${{ github.run_number }}
           path: |
-            ./flip/python/*.whl
+            ./flip/python/wheelhouse/*.whl
           retention-days: 10
