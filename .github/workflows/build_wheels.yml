@@ -13,7 +13,7 @@ jobs:
       fail-fast: false
       matrix:
         python: [ '3.10' ]
-        os: [ "windows-latest", "ubuntu-24.04" ]
+        os: [ "windows-latest", "ubuntu-20.04" ]
     steps:
       - uses: actions/checkout@v4
         with:
@@ -28,9 +28,8 @@ jobs:
         run: |
           cd flip/python
           git apply --reject --whitespace=fix ../../pyproject-toml.patch 
-          pip install cibuildwheel==2.18.1
           pip install -r requirements.txt
-          python -m cibuildwheel
+          pip wheel .
       - uses: actions/upload-artifact@v2
         name: Upload reports
         if: always()
