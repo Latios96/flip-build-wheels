@@ -23,10 +23,14 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
       - name: build wheel
+        env:
+          CIBW_BUILD: "cp310*amd64"
         run: |
           cd flip/python
+          git apply ..\..\pyproject-toml.patch
+          pip install cibuildwheel==2.18.1
           pip install -r requirements.txt
-          pip wheel .
+          python -m cibuildwheel
       - uses: actions/upload-artifact@v2
         name: Upload reports
         if: always()

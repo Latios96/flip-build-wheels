@@ -1,0 +1,15 @@
+diff --git a/python/pyproject.toml b/python/pyproject.toml
+index e6a7982..bd9e16c 100644
+--- a/python/pyproject.toml
++++ b/python/pyproject.toml
+@@ -37,4 +37,7 @@ requires = [
+ 
+ [project]
+ name = "flip"
+-dynamic = ['version', 'description', 'readme', 'requires-python', 'license', 'authors']
+\ No newline at end of file
++dynamic = ['version', 'description', 'readme', 'requires-python', 'license', 'authors']
++
++[tool.setuptools]
++packages = ["flip"]
+\ No newline at end of file
