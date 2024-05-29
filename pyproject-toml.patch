@@ -13,3 +13,16 @@ index e6a7982..bd9e16c 100644
 +[tool.setuptools]
 +packages = ["flip"]
 \ No newline at end of file
+diff --git a/python/setup.py b/python/setup.py
+index e6c4200..3c660d1 100644
+--- a/python/setup.py
++++ b/python/setup.py
+@@ -53,7 +53,7 @@ ext_modules = [
+         ["flip/main.cpp"],
+         extra_compile_args=extra_compile_args,
+         extra_link_args=extra_link_args,
+-        cxx_std=20
++        cxx_std=17
+     ),
+ ]
+
