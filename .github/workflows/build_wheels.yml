@@ -31,7 +31,7 @@ jobs:
         name: Upload reports
         if: always()
         with:
-          name: wheel-${{ github.run_id }}-${{ github.run_number }}
+          name: wheel-${{ matrix.os }}-${{ github.run_id }}-${{ github.run_number }}
           path: |
             ./flip/python/*.whl
           retention-days: 10
