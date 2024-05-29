@@ -27,7 +27,7 @@ jobs:
           CIBW_BUILD: "cp310*amd64"
         run: |
           cd flip/python
-          git apply ..\..\pyproject-toml.patch
+          git apply ../../pyproject-toml.patch
           pip install cibuildwheel==2.18.1
           pip install -r requirements.txt
           python -m cibuildwheel
