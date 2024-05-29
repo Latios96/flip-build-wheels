@@ -24,7 +24,7 @@ jobs:
           python-version: ${{ matrix.python }}
       - name: build wheel
         env:
-          CIBW_BUILD: "cp310*amd64"
+          CIBW_BUILD: "cp310*64"
         run: |
           cd flip/python
           git apply --reject --whitespace=fix ../../pyproject-toml.patch 
