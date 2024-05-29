@@ -10,8 +10,8 @@ jobs:
   build_wheel:
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: "false"
       matrix:
-        fail-fast: false
         python: [ '3.10' ]
         os: [ "windows-latest", "ubuntu-20.04" ]
     steps:
